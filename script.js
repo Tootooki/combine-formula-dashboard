@@ -22,7 +22,6 @@ async function fetchData() {
 
 function parseCurrency(str) {
     if (!str && str !== 0) return 0;
-    // Handle (1,000.50) format which represents negative in some financial cases, though here we have -$
     const cleanStr = String(str).replace(/[^\d.-]/g, '');
     return parseFloat(cleanStr) || 0;
 }
@@ -31,12 +30,10 @@ function determineStyleClass(val) {
     if (val === undefined || val === null || val === '') return 'cell-muted';
     const str = String(val);
     
-    // Specifically format zeroes or exact zero matches
     if (str === '0' || str === '0%' || str === '$0.00' || str === '0.00%') {
         return 'cell-muted';
     }
     
-    // Check if it's a financial/percentage number
     if (str.includes('$') || str.includes('%')) {
         const num = parseCurrency(str);
         if (num > 0) return 'cell-positive';
@@ -44,7 +41,7 @@ function determineStyleClass(val) {
         return 'cell-muted'; 
     }
     
-    return ''; // Normal text/number
+    return '';
 }
 
 function determineSummaryClass(val) {
@@ -65,26 +62,22 @@ function renderDashboard(data) {
     container.innerHTML = '';
 
     data.groups.forEach(group => {
-        // Headers setup
         let salesIdx = -1, profitIdx = -1;
         
-        // Let's find specific columns to pull totals from
         group.headers.forEach((h, i) => {
             const hStr = h?.toString().toUpperCase().trim() || '';
-            if (hStr === 'SALES' && salesIdx === -1) salesIdx = i; // First SALES usually is count
-            if (hStr === 'PROFIT') profitIdx = i; // Last profit column usually is total profit
+            if (hStr === 'SALES' && salesIdx === -1) salesIdx = i;
+            if (hStr === 'PROFIT') profitIdx = i;
         });
 
         const totalsRow = group.totals;
         
-        // Extract stats or just show placeholder
         const profitRaw = profitIdx > -1 ? (totalsRow[profitIdx] || '') : '';
         const salesRaw = salesIdx > -1 ? (totalsRow[salesIdx] || '') : '';
         
         const groupEl = document.createElement('div');
         groupEl.className = 'group-container';
         
-        // Create Header
         const headerHTML = `
             <div class="group-header" onclick="this.parentElement.classList.toggle('collapsed')">
                 <div class="group-title">
@@ -106,31 +99,35 @@ function renderDashboard(data) {
             </div>
         `;
 
-        // Create Table
         let tableHTML = `<div class="group-content"><div class="table-scroll"><table><thead><tr>`;
         
-        // Render headers. Skipping 'IMG' / Col A (index 0) because we don't have images
-        const startIndex = 1; 
+        // Start from index 0 to include the IMG and SKU
+        const startIndex = 0; 
         
         for (let i = startIndex; i < group.headers.length; i++) {
             tableHTML += `<th>${group.headers[i] || ''}</th>`;
         }
         tableHTML += `</tr></thead><tbody>`;
 
-        // Render Data rows
         group.data.forEach(row => {
-            // skip empty rows completely
             if (!row || row.length === 0 || !row[1] || row[1].trim() === '') return;
 
             tableHTML += `<tr>`;
             for (let i = startIndex; i < group.headers.length; i++) {
-                // If it is 0, render it as empty or muted "0"
                 let cellVal = row[i] !== undefined ? row[i] : '';
+
+                if (i === 0) {
+                    // It's the IMG column. 
+                    // Our extractor script brings '' for Google API embedded images.
+                    // Provide a nice placeholder.
+                    cellVal = `<div class="img-placeholder"><i class="fa-solid fa-box-open"></i></div>`;
+                }
+
                 if (cellVal === '0' || cellVal === '0%' || cellVal === '0.00%' || cellVal === '$0.00') {
                     cellVal = '-';
                 }
 
-                const cellClass = i > startIndex ? determineStyleClass(row[i]) : ''; // Only apply color-coding to stats
+                const cellClass = i > 1 ? determineStyleClass(row[i]) : ''; 
                 tableHTML += `<td class="${cellClass}">${cellVal}</td>`;
             }
             tableHTML += `</tr>`;
