@@ -2,12 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchData();
 });
 
+let globalImages = {};
+
 async function fetchData() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch(`data.json?t=${new Date().getTime()}`);
         if (!response.ok) throw new Error('Data not found');
         const data = await response.json();
         
+        globalImages = data.images || {};
         renderDashboard(data);
     } catch (error) {
         document.getElementById('dashboard-container').innerHTML = `
@@ -101,7 +104,6 @@ function renderDashboard(data) {
 
         let tableHTML = `<div class="group-content"><div class="table-scroll"><table><thead><tr>`;
         
-        // Start from index 0 to include the IMG and SKU
         const startIndex = 0; 
         
         for (let i = startIndex; i < group.headers.length; i++) {
@@ -111,16 +113,18 @@ function renderDashboard(data) {
 
         group.data.forEach(row => {
             if (!row || row.length === 0 || !row[1] || row[1].trim() === '') return;
+            const currentSku = row[1];
 
             tableHTML += `<tr>`;
             for (let i = startIndex; i < group.headers.length; i++) {
                 let cellVal = row[i] !== undefined ? row[i] : '';
 
                 if (i === 0) {
-                    // It's the IMG column. 
-                    // Our extractor script brings '' for Google API embedded images.
-                    // Provide a nice placeholder.
-                    cellVal = `<div class="img-placeholder"><i class="fa-solid fa-box-open"></i></div>`;
+                    if (globalImages[currentSku]) {
+                        cellVal = `<div class="img-wrapper"><img src="${globalImages[currentSku]}" alt="Product" /></div>`;
+                    } else {
+                        cellVal = `<div class="img-placeholder"><i class="fa-solid fa-box-open"></i></div>`;
+                    }
                 }
 
                 if (cellVal === '0' || cellVal === '0%' || cellVal === '0.00%' || cellVal === '$0.00') {
