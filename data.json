@@ -909,5 +909,40 @@
         ]
       ]
     }
-  ]
+  ],
+  "images": {
+    "Pistachio-Butter-200g-New2": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0G2KZGRNH&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Pistachio-Cream-1kg-New2": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0G2LC4FHK&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Pistachio-Cream-200g-New2": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0G2L7V5L9&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Pistachio-Cream-5kg-New2": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0G2LC7N6C&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Pistachio-Sauce-700g-New2": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0G2LBZ9HS&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Cone-DubaiMint-6pack-450g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5QZ62D&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Cone-StrawCookie-6pack-450g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5MS4SB&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Dried-Kadayif-10KG": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0F7LX896Y&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Dried-Kadayif-180gm": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0F9WZ117F&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Dried-Kadayif-400gm": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0F7LZFZTT&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Dried-Kadayif-5KG": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0F7LYMD1W&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Roasted-Kadayif-10KG": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0F9RSWGFZ&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Roasted-Kadayif-5KG": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0F9RSHT3B&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Roasted-Kataifi-180g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0GDMPMB2X&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Roasted-Kataifi-400g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0GDMFCD5N&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-12pack-1200g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ68HPM2&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Blueberry-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ65RH16&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Brownie-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5PPSP3&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Caramel-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5NHGQ8&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Coconut-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0G1FDD267&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Cookie-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ69Y433&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Dark-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5VSSXH&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Dark-200g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ6C1BN2&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Hazelnut-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ6G1BZC&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Matcha-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0G1FL5MKG&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Milk-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5VPR5Q&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Milk-200g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5T3DK4&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Orange-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5MRWJ5&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Pumpkin-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ61M15L&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Raspberry-160g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5SZKDD&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-Strawberry-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5TS62B&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-White-100g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0FZ5XNZTT&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822",
+    "Choco-White-200g": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL100_&ASIN=B0G1FGJ81B&MarketPlace=US&ID=AsinImage&WS=1&ServiceVersion=20070822"
+  }
 }
