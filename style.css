@@ -317,3 +317,10 @@ td {
 ::-webkit-scrollbar-thumb:hover {
     background: #475569;
 }
+
+@media (max-width: 768px) {
+    th:nth-child(2), td:nth-child(2) {
+        position: static;
+        box-shadow: none;
+    }
+}
