@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Sales Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <div class="header-content">
+                <h1><i class="fa-solid fa-chart-pie"></i> Executive Sales Dashboard</h1>
+                <p id="dashboard-date" class="date-badge"><i class="fa-regular fa-clock"></i> Loading data...</p>
+            </div>
+            
+            <div class="global-summary" id="global-summary">
+                <!-- Global summaries can go here if needed -->
+            </div>
+        </header>
+
+        <main id="dashboard-container">
+            <div class="loader">
+                <div class="spinner"></div>
+                <p>Synthesizing Data...</p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
